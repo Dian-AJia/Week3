@@ -1,0 +1,43 @@
+/* pages/info/info.wxss */
+.box{
+  width: 400rpx;
+  height: 600rpx;
+  margin-bottom: 200rpx;
+}
+.title{
+  padding: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 600;
+  color: gray;
+}
+.image image{
+  width: 100%;
+  height: 550rpx;
+  font-weight: 600;
+}
+.input{
+  width: 600rpx;
+  height: 200rpx;
+  background-color: #ECECEC;
+  border: 1px solid black;
+}
+.commont{
+  width: 600rpx;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.talk{
+  margin: 20rpx;
+  border: 1px solid #ECECEC;
+}
+.user{
+  width: 130rpx;
+  background-color: aliceblue;
+}
+.butt{
+  display: flex;
+}

@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="header">
+  <input type="text" placeholder="搜 索" class="input"/>
+</view>
+
+<!-- 影院热映 -->
+<view class="title">
+  <text class="hot">影院热映</text>
+  <text class="more">查看更多 > </text>
+</view>
+<view class="movie-hot">
+  <block wx:for="{{movie}}">
+    <navigator url="/pages/info/info?id={{item.id}}" hover-class="navigator-hover">
+    <view class="box">
+    <image src="{{item.image}}"></image>
+    <view class="name">{{item.title}}</view>
+    <view class="score">评分：{{item.score}}</view>
+  </view>
+</navigator>
+  </block>
+</view>
+
+<!-- 豆瓣热门 -->
+<view class="title">
+  <text>豆瓣热门</text>
+  <text class="more">查看更多 > </text>
+</view>
+<view class="movie-hot">
+  <block wx:for="{{movie}}">
+    <view class="box">
+  <image src="{{item.image}}"></image>
+  <view class="name">{{item.title}}</view>
+  <view class="score">评分：{{item.score}}</view>
+  </view>
+  </block>
+</view>

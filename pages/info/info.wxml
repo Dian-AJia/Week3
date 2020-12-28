@@ -1,0 +1,39 @@
+<!--pages/info/info.wxml-->
+<view class="box">
+  <view>{{info.id}}</view>
+<view class="title">{{info.title}}</view>
+<view class="image">
+  <image src="{{info.image}}"></image>
+</view>
+<view class="score">
+  评分：{{info.score}}
+</view>
+</view>
+
+<view>
+  <form catchsubmit="formSubmit" catchreset="formReset">
+    <view class="commont">
+      <text>评论</text>
+      <text>共有{{count}}条评论</text>
+    </view>
+    <input type="text" name="text" class="input"/>
+    <view class="butt">
+      <button style="margin: 30rpx 0" type="primary" formType="submit" data-id="{{info.id}}">提交评论</button>
+    <button style="margin: 30rpx 0"  type="primary" open-type="share">分享</button>
+    </view>
+  </form>
+</view>
+
+
+<block wx:for="{{comment}}" >
+  <view class="talk">
+    <view class="user">
+    用户{{item.uid}}：
+  </view>
+  <view>
+    {{item.comment}}
+  </view>
+  </view>
+</block>
+
+
